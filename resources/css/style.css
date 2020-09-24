@@ -2,10 +2,16 @@
 
 html {
   font-size: 16px;
+  height: 100%;
+  width: 100%;
 }
 
 body {
+  background: rgba(243, 243, 243, .8);
   font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -13,12 +19,51 @@ a {
   color: inherit;
 }
 
-strong {
-  font-weight: bold;
+ol,
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-em {
-  font-style: italic;
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+
+h1,
+h2 {
+  font-family: "Damion", cursive;
+}
+
+h1 {
+  font-size: 2.5em; 
+}
+
+h2 {
+  font-size: 1.75em;
+}
+
+h3 {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.5em;
+}
+
+p {
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.feature .content p,
+.about-content p {
+  color: #4a4a4a;
+}
+
+.logo {
+  font-family: "Rubik", sans-serif;
+  font-size: 3em;
+  text-transform: uppercase;
 }
 
 .image-container {
@@ -30,56 +75,65 @@ em {
   max-width: 100%;
 }
 
-@media only screen and (max-width: 990px) {
-  html {
-    font-size: 14px;
-  }
-}
-
 /* Header Styles */
 
 header {
+  align-items: center;
   background-color: #f3f3f3;
   display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 15px 0;
   position: fixed;
   width: 100%;
-  z-index: 100;
+  z-index: 1;
 }
 
-header .content {
+header .content-wrapper {
   align-items: center;
   display: flex;
-  padding: .5rem 3.75rem;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 0;
 }
 
-header .logo-small {
-  display: none;
-}
-
-header .logo-small,
-header .logo-big {
-  flex-grow: 1;
-}
-
-header .logo-big a {
+header .logo a {
   color:#692517;
-  font-family: "Rubik", sans-serif;
-  font-size: 2rem;
-  text-transform: uppercase;
 }
 
 header .fa-mug-hot {
   color: #000;
 }
 
-header nav li {
-  display: inline;
-  padding-right: 2rem;
+.header-divider {
+  background-color:#692517;
+  height: 1px;
+  margin: 10px 0 20px 0;
+  width: 90%;
 }
+
+.header nav {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  font-size: 1.125em;
+  font-weight: 700;
+  justify-content: space-around;
+  text-transform: uppercase;
+  width: 60%;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+} 
 
 header nav li a {
   color: #692517;
   font-family: "Rubik", sans-serif;
+  padding: 0 40px;
+  text-transform: uppercase;
 }
 
 header nav li a:hover {
@@ -87,366 +141,278 @@ header nav li a:hover {
   font-weight: 700;
 }
 
-header nav li:last-child {
-  padding-right: 0;
-}
-
-@media only screen and (max-width: 990px) {
-  header .logo-big {
-    display: none;
-  }
-
-  header .logo-small {
-    display: block;
-  }
-}
-
-@media only screen and (max-width: 540px) {
-  header .content {
-    flex-direction: column;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  header .logo-small {
-    align-items: center;
-    display: flex;
-    justify-content: space-around;
-  }
-
-  header nav ul {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 10px;
-    width: 100%;
-  }
-
-  header nav li {
-    padding: 0;
-  }
-}
-
 /* Sign Up Section Styles */
 
-#sign-up-section {
+.sign-up-section {
   align-items: center;
-  background-image: url('../img/spilled-coffee-beans-hero-jessica-lewis-unsplash.png');
-  background-position: bottom;
-  background-repeat: no-repeat;
+  background: url('../img/spilled-coffee-beans-hero-jessica-lewis-unsplash.png') center no-repeat;
   background-size: cover;
   display: flex;
-  height: 43.5rem;
+  flex-flow: row wrap;
   justify-content: flex-end;
+  min-height: 500px;
 }
 
-#sign-up-cta {
+.sign-up-cta {
+  align-items: center;
   background-color: rgba(105, 37, 23, 0.8);
   border-radius: 10px;
-  padding: 0 3rem 1.5rem 3rem;
+  display: flex;
+  justify-content: center;
+  padding: 0 30px 40px 30px;
+  margin-top: 290px;
+  margin-bottom: 60px;
   position: relative;
   right: 5%;
   top: 5%;
 }
 
-#sign-up-cta .content {
+.sign-up-cta .content {
   color: white;
   font-family: "Rubik", sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.25em;
   line-height: 1.4;
-  margin-top: 2rem;
+  margin-top: 32px;
   text-align: center;
-  width: 25.625rem;
 }
 
-#sign-up-cta h1 {
-  font-size: 3.125rem;
-  text-transform: uppercase;
+.sign-up-cta .headline .logo,
+.sign-up-cta .headline h1,
+.sign-up-cta .email p {
+  margin: 0;
 }
 
-#sign-up-cta h2 {
-  font-size: 3.25rem;
-}
-
-#sign-up-cta .cursive {
-  font-family: "Damion", cursive;
-}
-
-#sign-up-cta .button {
+.sign-up-cta .button {
   background-color: #4d2600;
   border-radius: 10px;
-  margin-top: 1.625rem;
-  padding: 1.25rem 7.25rem;
+  margin-top: 25px;
+  margin-left: 80px;
+  padding: 10px;
+  width: 50%;
 }
 
-@media only screen and (max-width: 895px) {
-  #sign-up-section {
+ /* @media only screen and (max-width: 895px) {
+  .sign-up-section {
     align-items: center;
-    height: 28rem;
     justify-content: flex-end;
   }
 
-  #sign-up-cta {
+  .sign-up-cta {
     background-color: transparent;
     height: auto; 
     width: auto;
     align-items: center;
   }
 
-  #sign-up-cta .content {
+  .sign-up-cta .content {
     margin-top: 0;
   }
 
-  #sign-up-cta .email {
+  .sign-up-cta .email {
     display: none;
   }
 
-  #sign-up-cta h1,
+  .sign-up-cta h1,
   h2 {
     margin: 0;
   }
-  #sign-up-cta h1 {
-    font-size: 3.125rem;
+
+  .sign-up-cta h1 {
+    font-size: 3.125em;
   }
 
-  #sign-up-cta h2 {
-    font-size: 2.25rem;
-  }
+  .sign-up-cta h2 {
+    font-size: 2.25em;
+  } */
+} 
+
+
+/* About Us Section */
+
+.about-section {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center; 
 }
 
-@media only screen and (max-width: 600px) {
-  #sign-up-section {
-    height: 20rem;
-  }
-  #sign-up-cta h1,
-  h2 {
-    margin: 0;
-  }
+.about-content {
+  align-items: center;
+  background: url('../img/coffee-cup-stain.jpg') top left no-repeat;
+  display: flex; 
+  flex-flow: row wrap;
+  justify-content: center;
+  position: relative; 
+} 
 
-  #sign-up-cta h1 {
-    font-size: 2.25rem;
-  }
+.about-content:before {
+  background: rgb(243, 243, 243, .8);
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: .9; 
+  position: absolute;
+  top: 0;
+  width: 100%;	  
+}
 
-  #sign-up-cta h2 {
-    font-size: 2rem;
-    padding-top: 13rem;
-  }
+.about-content * {
+  position: relative;
+}  
+
+.about-wrapper {
+    width: 90%;
+}
+
+.about-content h1 {
+  margin-top: 80px; 
+  margin-bottom: .75em; 
+  text-align: center;
+}
+
+.about-content p {
+  border-left: 1px dotted rgba(105, 37, 23, 0.8);
+  border-right: 1px dotted rgba(105, 37, 23, 0.8);
+  margin: 0;
+  padding: 20px;
 }
 
 /* Features Section */
 
-#features-section {
-  background-color: #f3f3f3;
+.features-section {
   display: flex;
-  justify-content: space-between;
-  padding: 4rem 5%;
+  flex-flow: column;
+  padding: 0;
+}
+
+.features-section h1 {
+  margin-top: 50px;
+  text-align: center;
+  width: 100%;
 }
 
 .feature {
   background-color: white;
   flex: 1;
-  margin: 0px 1.25rem;
-  padding: 2rem;
+  margin: 50px 60px;
+  padding-top: 40px;
 }
 
 .feature .image-container {
-  height: 45%;
   margin: 0 auto;
-  width: 90%; 
+  width: 80%; 
 }
 
 .feature .content {
-  padding: 0 1.75rem;
+  margin: 0 80px;
+  padding: 20px;
 }
 
-.feature p {
-  font-family: "Damion", cursive;
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin-bottom: .75rem;
+.feature .content h2,
+.feature .content h3 {
   text-align: center;
 }
 
-.feature h2 {
-  color: #000;
-  font-family: "Rubik", sans-serif;
-  font-size: 2.25rem;
-  font-weight: bold;
-  margin-top: 0;
-  text-align: center;
-}
-
-.feature h3 {
-  color: #4a4a4a;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.4;
-}
-
-@media only screen and (max-width: 895px) {
+ /* @media only screen and (max-width: 895px) {
   #features-section {
-    padding: 1rem;
+    padding: 16px;
   }
 
   .feature {
-    margin: 0px .5rem;
-    padding: 1rem;
+    margin: 0px 8px;
+    padding: 15px;
   }
 
   .feature h2 {
-    font-size: 2rem;
+    font-size: 2em;
     line-height: 1.3;
   }
 
   .feature h3 {
-    font-size: .875rem;
+    font-size: .875em;
     line-height: 1.4;
   }
-}
+} */
 
-@media only screen and (max-width: 600px) {
-  #features-section {
-    flex-flow: column;
-    padding: 0;
-  }
+/* for desktop */
 
-  .feature {
-    margin: 0;
-    padding: 1.25rem 1rem 0 1rem; 
-  }
-
-  .feature .content {
-    padding: 1.25rem 1.75rem 1.875rem 1.75rem;
-  }
-}
+/* .features-section {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+} */
+  
 
 /* Events Section */
 
-#events-section {
+.events-section {
   background-image: url('../img/coffee-beans-mike-kenneally-unsplash.png');
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 1rem 0;
+  margin-top: 80px;
+  padding: 20px 0;
 }
   
-#events-section .content {
+.events-section .content {
   background-color:  rgba(105, 37, 23, 0.8);
-  margin-bottom: 3rem;
-  padding: 0 1.625rem;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  padding: 0 18px;
 }
 
-#events-section .content h2 {
+.events-section .content h1 {
   color: white;
   font-family: "Rubik", sans-serif;
-  font-size: 2.25rem;
-  font-weight: bold;
 }
 
-#events-section .content h3 {
+.events-section .content p {
   color: white;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.4;
 }
 
-#events-section .images-container {
+.events-section .images-container {
   display: flex;
+  margin-bottom: 50px;
   max-width: 100%;
   padding: 0 1%;
 }
 
-@media only screen and (max-width: 600px) {
-  #events-section {
-    padding: 1.5rem 0 0 0;
-  }
-
-  #events-section .content {
-    margin-bottom: 1rem;
-  }
-
-  #events-section .content h2 {
-    font-size: 1.125rem;
-    font-weight: normal;
-    line-height: 1.3;
-    padding-bottom: .625rem; 
-  }
-
-  #events-section .content h3 {
-    font-size: .875rem;
-    line-height: 1.4;
-  }
-
-  #events-section .images-container {
-    padding: 0;
-  }
-
-  #events-section .extra {
-    display: none;
-  }
-}
-
 /* Quotes Section */
 
-#quotes-section {
+.quotes-section {
   background-color: #f3f3f3;
 }
 
-#quotes-section .content {
+.quotes-section .content {
   align-items: center;
   display: flex;
   justify-content: center;
-  padding: 2rem 1.5rem;
+  padding: 32px 20px;
 }
 
-#quotes-section .quote {
+.quotes-section .quote {
   color: #4a4a4a;
   font-family: "Rubik", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.3em;
   font-style: italic;
-  padding-right: 1.875rem;
+  padding-right: 20px;
 }
 
-#quotes-section .quote-citation {
+.quotes-section .quote-citation {
   font-family: "Palatino", serif; 
-  font-size: 1.2rem;
-}
-
-@media only screen and (max-width: 895px) {
-  #quotes-section .content {
-    padding: 3rem 1.5rem;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  #quotes-section .content {
-    flex-flow: column;
-    padding: 1.5rem 1rem;
-  }
-
-  #quotes-section .quote {
-    font-size: 1.5rem;
-    line-height: 1.4;
-  }
-
-  #quotes-section .quote-citation {
-    display: block;
-    padding-top: 1rem;
-    margin: auto;
-  }
 }
 
 /* Footer */
 
 footer {
   background-color: rgba(105, 37, 23, 0.8);
-  padding: 1rem 2rem;
+  padding: 16px 32px;
 }
 
 footer .content {
   color: white;
   display: flex;
-  font-size: .75rem;
+  font-size: .75em;
   justify-content: center;
 }
 
@@ -455,8 +421,41 @@ footer .name {
   text-transform: uppercase;
 }
 
-@media only screen and (max-width: 600px) {
-  footer .content {
-    font-size: .625rem;
+
+/* --------------------------- TABLET STYLES - HOMEPAGE ------------------------- */
+
+
+@media only screen and (min-width: 768px){
+  header {
+    justify-content: space-around;
+    padding: 30px 0;
+  }
+
+  header .content-wrapper { 
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  header .logo a {
+    width: 40%;
+  }
+  
+  .header-divider {
+    display: none;
+  }
+
+  header nav {
+    width: 35%;
+  }
+
+  header nav ul {
+    justify-content: space-between;
+  } 
+
+  header nav li a {
+    color: #692517;
+    font-family: "Rubik", sans-serif;
+    padding: 0 10px;
+    text-transform: uppercase;
   }
 }
