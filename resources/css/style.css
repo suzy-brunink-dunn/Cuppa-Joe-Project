@@ -160,7 +160,7 @@ header nav li a:hover {
 
 .sign-up-section {
   align-items: center;
-  background: url('../img/spilled-coffee-beans-hero-jessica-lewis-unsplash.png') center no-repeat;
+  background: url('../img/spilled-coffee-beans-hero-jessica-lewis-unsplash.jpg') center no-repeat;
   background-size: cover;
   display: flex;
   flex-flow: row wrap;
@@ -243,7 +243,7 @@ header nav li a:hover {
     width: 90%;
 }
 
-.about-wrapper h1 {
+.about-section h1 {
   font-size: 3em;
   margin-top: 60px; 
   text-align: center;
@@ -305,7 +305,7 @@ header nav li a:hover {
 /* Events Section */
 
 .events-section {
-  background-image: url('../img/coffee-beans-mike-kenneally-unsplash.png');
+  background-image: url('../img/coffee-beans-mike-kenneally-unsplash.jpg');
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -438,6 +438,13 @@ footer .name {
   
   header nav li a {
     font-size: 1em;
+  }
+
+  /* Sign Up Section */
+
+  .sign-up-cta {
+    padding: 10px 40px 50px 40px;
+    right: 10%;
   }
 
   /* About Section */
